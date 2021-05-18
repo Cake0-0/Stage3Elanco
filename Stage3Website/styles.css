@@ -1,0 +1,185 @@
+p, a{
+  color: #02253E
+}
+
+
+body{
+  font-family: 'Maven Pro', sans-serif ;
+}
+
+/* NAVBAR */
+.navbar{
+  background-color: #02253E;
+}
+.navbar-nav{
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item .nav-link{
+  color: white;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* INPUT FIELDS */
+sup{
+  color: red;
+}
+
+.info{
+  width: 50%;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.field{
+  width: 50%; 
+  height: 50px;
+  position: relative;
+}
+
+.field + span{
+  color: red;
+  width: 50%;
+  font-family: sans-serif;
+  font-size: 15px;
+  visibility: hidden;
+}
+
+.field + span.error{
+  visibility: visible;
+}
+
+
+.field input{
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  color: #595a5b;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+}
+
+.field label{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  
+  border-bottom: 1px solid #777778;
+}
+
+.field span{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.4s ease;
+}
+
+.field input:focus + label span,
+.field.date input + label span,
+.above{
+  transform: translateY(-150%);
+  font-size: 14px;
+}
+
+.field input:focus + label {
+  border-bottom: 2px solid black;
+}
+
+
+/* Progress Bar */
+
+.progressbar{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.section{ 
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.section-circle{
+  width: 30px;
+  height: 32px;
+  border-radius: 100%;
+  background-color:#ebebeb;
+  border: 2px solid  #2f2d2d;
+  z-index: 2;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.section-name{
+  font-size: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+
+.status-progress{
+  background-color: #ebebeb;
+  width: 70%;
+  height: 5px;
+  position: absolute;
+  top: 12px;
+  left: 15%;
+}
+
+.section-circle.active{
+  background-color: #40c057;
+}
+
+.section-circle.active > a i,
+.section-circle.active > i{
+  color: white;
+}
+
+.status-progress.complete{
+  background-color: #40c057;
+  z-index: 1;
+}
+
+select option.invisible {
+  display: none;
+}
+
+.file-container{
+  width: 50%;
+  position: relative;
+}
+
+.file-container button{
+  width: 100%;
+  padding: .375rem 2.25rem .375rem .75rem;
+  text-align: left;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(206, 212, 218);
+  background-color: #fff;
+}
+
+
+.file-container i{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#pet-img{
+  display: none;
+}
+
+#pet-img.show{
+  display: block;
+}

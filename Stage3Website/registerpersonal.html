@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/fce9e25ee3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Register Personal Details</title>
+</head>
+<body onload="sessioncheck()"></body>>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-sm navbar-dark mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="Images/logo.png"></a>      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link"href="personaldetails.html">Rebate Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"href="loginpage.html"  id=loginaccount>Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="text-center mb-4">
+        <h1>Register Your Account</h1>
+        <p>Please enter your details below</p>
+    </header>
+    
+    <!-- PROGRESS BAR -->
+    <div class="progressbar mb-5">
+      <div class="section">
+        <div class="section-circle active">
+          <i class="far fa-user"></i>
+        </div>
+        <p class="section-name">Personal Details</p>
+      </div>
+      <div class="section">
+        <div class="section-circle">
+          <i class="fas fa-home"></i>
+        </div>
+        <p class="section-name">Address Details</p>
+      </div>
+      <div class="section">
+        <div class="section-circle">
+          <i class="fas fa-paw"></i>
+        </div>
+        <p class="section-name">Pet Details</p>
+      </div>
+      <div class="section">
+        <div class="section-circle">
+          <i class="fab fa-wpforms"></i>
+        </div>
+        <p class="section-name">Complete</p>
+      </div>
+      <div class="status-progress complete" style="width: 10%;"></div>
+      <div class="status-progress"></div>
+    </div>
+    <body>
+        <form id="register-form" method="get" action="registeraddress.html"> 
+          <div class="field mb-2">
+            <input type="text" name="regfullname" class="required" id="regfullname">
+            <label for="regfullname">
+              <span>Full Name<sup>*</sup></span>
+            </label>    
+          </div>
+          <span class="mb-3">Full Name is required</span>
+          
+          <div class="field mb-2">
+            <input type="email" name="regemail"  class="required" id="regemail">
+            <label for="regemail">
+              <span>Email<sup>*</sup></span>
+            </label>
+          </div>
+          <span class="mb-3">Email is required</span>
+
+          <div class="field mb-2">
+            <input type="password" name="regpassword"  class="required" id="regpassword">
+            <label for="regpassword">
+              <span>Password<sup>*</sup></span>
+            </label>
+          </div>
+          <span class="mb-3">Password is required</span>
+          
+          <div class="field mb-2">
+          <input name="password_confirm" required="required" type="password" id="password_confirm" oninput="check(this)" class="form-control" />
+          <label for="password">
+            <span>Confirm Password<sup>*</sup></span>
+          </label>
+          <script language='javascript' type='text/javascript'>
+              function check(input) {
+                  if (input.value != document.getElementById('regpassword').value) {
+                      input.setCustomValidity('Password Must be Matching.');
+                  } else {
+                      // input is valid -- reset the error message
+                      input.setCustomValidity('');
+                  }
+              }
+          </script>
+          </div>
+        </br>
+          <div class="field mb-2">
+            <input type="tel" name="regphonenumber" id="regphone">
+            <label for="regphonenumber">
+              <span>Phone Number</span>
+            </label>
+          </div>
+          <p class="info">By submitting your phone number, you agree that you wish to be contacted about any rebate submissions</p>
+          
+          <div class="field mb-3">
+            <button type="submit" input id="rgstr_btn"  class="btn btn-primary form-control">Continue </button>
+          </div>
+      
+        </form>
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script src="Javascript/validate.js" ></script>
+    <script src="Javascript/login.js" ></script>
+
+    </body>
+</html>
